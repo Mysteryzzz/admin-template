@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orders Management</title>
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+
+    <script src="static/js/jquery-3.3.1.js"></script>
+
+    <script src="static/js/bootstrap.js"></script>
+
+    <link rel="import" href="navigation.html">
+
+    <style type="text/css">
+        /** {*/
+        /*margin: 5px;*/
+        /*padding: 0px;*/
+        /*}*/
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        /*#vertical-container {*/
+        /*position: absolute;*/
+        /*display: flex;*/
+        /*align-items: center; !*垂直居中*!*/
+        /*justify-content: center; !*水平居中*!*/
+        /*height: 100%;*/
+        /*width: 100%;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">订单管理</div>
+        <!-- Table -->
+        <table class="table .table-bordered">
+            <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Number</th>
+                <th>Buyer ID</th>
+                <th>Create Date</th>
+                <th>State</th>
+                <th>Total Price</th>
+                <th>Operation</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <nav style="text-align: center">
+        <ul class="pagination">
+        </ul>
+    </nav>
+
+</div>
+
+<!--Add Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">用户信息</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="input-group hidden">
+                        <span class="input-group-addon">ID</span>
+                        <input id="userId" name="id" type="text" class="form-control" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Info</span>
+                        <input id="userName" name="info" type="text" class="form-control"
+                               aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">isLock</span>
+                        <input id="userEmail" name="lock" type="text" class="form-control"
+                               aria-describedby="basic-addon1">
+                    </div>
+
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="saveBtn" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Delete Modal-->
+<div id="deleteModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">确认删除</h4>
+            </div>
+            <div class="modal-body">
+                <p>你确认删除该用户么？
+                    <span id="delId"></span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button id="deleteSure" type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--Load Script-->
+<script>
+
+    var link = document.querySelector('link[rel="import"]');
+
+    // 从导入中复制 <template>。
+    var template = link.import.querySelector('template');
+    var content = template.content.cloneNode(true)
+
+    document.querySelector('body').appendChild(content);
+
+    $('.navbar > ul:nth-child(1) li:nth-child(3)').addClass("active");
+</script>
+
+<!--Executable Script -->
+<script>
+
+    ~function (pageNumber) {
+        console.log(pageNumber);
+        loadPage(pageNumber);
+    }(1);
+
+    function loadPage(pageNumber) {
+        //clean current page
+        $('table tbody').empty();
+        $('.pagination').empty();
+
+
+        $.get(
+            "/order",
+            {
+                "pageNumber": pageNumber
+            },
+            function (data, status) {
+                if (status === "success") {
+
+                    //fill the tree: create the table
+                    $(data.list).each(function (index, item) {
+                        console.log(item);
+                        let id = item.id;
+                        let orderNum = item.orderNum;
+                        let buyerId = item.buyerId;
+                        let createDate = item.createDate;
+                        let state = item.state;
+                        let totalPrice = item.totalPrice;
+                        let tr = $("<tr></tr>");
+                        tr.append($("<td></td>").text(id));
+                        tr.append($("<td></td>").text(orderNum));
+                        tr.append($("<td></td>").text(buyerId));
+                        tr.append($("<td></td>").text(createDate));
+                        tr.append($("<td></td>").text(state));
+                        tr.append($("<td></td>").text(totalPrice));
+                        let buttonGroup = $("<td></td>");
+                        if(item.state === 0){
+                            buttonGroup.append($("<button></button>").attr({onclick : "javascript:delivery(this)", type : "button",  class : "btn btn-default btn-sm"}).text("执行发货"));
+                        }
+                        tr.append(buttonGroup);
+                        $('table tbody').append(tr);
+                    });
+
+
+                    //fill the pagination
+                    let preLi = $('<li></li>');
+                    preLi.append($('<a></a>').attr("href", "javascript:loadPage(" + ( (pageNumber - 1) > 0 ? pageNumber - 1 : 1) + ")").text('<<'));
+                    $('.pagination').append(preLi);
+                    for (let i = 1; i <= data.lastPage; ++i)
+                    {
+                        let li = $('<li></li>');
+                        li.append($('<a></a>').attr("href",  "javascript:loadPage("+ i +")").text(i));
+                        $('.pagination').append(li);
+                    }
+                    let postLi = $('<li></li>');
+                    postLi.append($('<a></a>').attr("href",  "javascript:loadPage(" + ( (pageNumber + 1) < data.lastPage ? pageNumber + 1 : data.lastPage) + ")").text('>>'));
+                    $('.pagination').append(postLi);
+
+                }
+                else {
+                    alert("Request failed");
+                }
+            }
+        );
+    }
+
+
+
+    function delivery(object) {
+        let tr = $(object).parent().parent();
+        let id = tr.children('td').eq(0).text();
+        let state = tr.children('td').eq(4).text();
+        $.ajax({
+            url: "/order/",
+            type: "put",
+            data: JSON.stringify({id:id}),
+            contentType: "application/json;charset=utf-8",
+            success: function (data, status) {
+                console.log(data + " Status:" + status)
+                if (data.msg === "success") {
+                    alert("发货成功");
+                    window.location.reload();
+                }
+                else {
+                    alert("发货失败");
+                }
+            }
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlearn.mapper.OrderMapper">
+
+    <resultMap id="orderMapper" type="order">
+        <id property="id" column="id"></id>
+        <result property="orderNum" column="orderNum" />
+        <result property="buyerId" column="buyerId" />
+        <result property="createDate" column="createDate" />
+        <result property="state" column="state" />
+        <result property="totalPrice" column="totalPrice" />
+    </resultMap>
+
+    <select id="findAll" resultMap="orderMapper">
+        SELECT id, orderNum, buyerId, createDate, state, totalPrice FROM orders
+    </select>
+
+
+    <update id="updateState">
+         UPDATE orders SET state = #{state} WHERE orders.id = #{id}
+    </update>
+
+
+</mapper>
