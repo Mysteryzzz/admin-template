@@ -49,21 +49,21 @@ public class LoginController {
 //        resultUtil.setMsg(admin);
 
 
-
-
-
         try {
             if (adminService.login(admin)){
                 HttpSession session = request.getSession();
                 session.setAttribute("user", admin.getEmail());
+
                 resultUtil.setCode(200);
                 resultUtil.setMsg("success");
             }
             else {
+                request.getSession().removeAttribute("user");
                 resultUtil.setCode(300);
                 resultUtil.setMsg("Please check your password or username.");
             }
         } catch (Exception e) {
+            request.getSession().removeAttribute("user");
             e.printStackTrace();
             resultUtil.setCode(100);
             resultUtil.setMsg(e.getMessage());

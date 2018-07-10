@@ -39,22 +39,28 @@
 
     
 
-    <mvc:resources location="/" mapping="/**/*.js"/>
-    <mvc:resources location="/" mapping="/**"/>
-    <mvc:resources location="/" mapping="/**/images/*" cache-period="360000"/>
-    <mvc:resources location="/" mapping="/**/fonts/*" cache-period="360000"/>
-
-
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**"/>-->
-            <!--<bean class="com.mlearn.config.AuthenticationInterceptor"></bean>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <!--<mvc:resources location="/" mapping="/**/*.js"/>-->
+    <!--<mvc:resources location="/" mapping="/**"/>-->
+    <!--<mvc:resources location="/" mapping="/**/images/*" cache-period="360000"/>-->
+    <!--<mvc:resources location="/" mapping="/**/fonts/*" cache-period="360000"/>-->
 
 
 
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/static/**"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/*login*"></mvc:exclude-mapping>
+            <bean class="com.mlearn.config.AuthenticationInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!-- 2.静态资源默认servlet配置
+        (1)加入对静态资源的处理：js,gif,png
+        (2)允许使用"/"做整体映射
+     -->
+    <mvc:default-servlet-handler/>
 
 
 </beans>

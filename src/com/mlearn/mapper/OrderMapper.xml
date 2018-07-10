@@ -7,13 +7,13 @@
         <id property="id" column="id"></id>
         <result property="ordernum" column="ordernum" />
         <result property="buyerId" column="buyerId" />
-        <result property="createDate" column="createDate" />
+        <result property="createdate" column="createdate" />
         <result property="state" column="state" />
-        <result property="totalPrice" column="totalPrice" />
+        <result property="totalprice" column="totalprice" />
     </resultMap>
 
     <select id="findAll" resultMap="orderMapper">
-        SELECT id, ordernum, buyerId, createDate, state, totalPrice FROM orders
+        SELECT id, ordernum, buyerId, createdate, state, totalprice FROM orders
     </select>
 
 

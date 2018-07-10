@@ -2,6 +2,7 @@ package com.mlearn.service;
 
 
 import com.mlearn.entity.Order;
+import com.mlearn.entity.OrderItem;
 import com.mlearn.mapper.OrderMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +28,12 @@ public class OrderServiceImpl implements OrderService {
 
         orderMapper.updateState(id, 1);
 
+    }
+
+    @Override
+    public List<OrderItem> selectByOrderNumber(Integer orderNumber) {
+
+
+        return null;
     }
 }

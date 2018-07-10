@@ -11,9 +11,9 @@ public class Order implements Serializable {
 
     private Integer buyerId;
 
-    private Date createDate;
+    private Date createdate;
 
-    private Double totalPrice;
+    private Double totalprice;
 
     private Integer state;
 
@@ -22,13 +22,13 @@ public class Order implements Serializable {
         super();
     }
 
-    public Order(Integer id, String ordernum, Integer buyerId, Date createDate, Double totalPrice, Integer state) {
+    public Order(Integer id, String ordernum, Integer buyerId, Date createdate, Double totalprice, Integer state) {
         super();
         this.id = id;
         this.ordernum = ordernum;
         this.buyerId = buyerId;
-        this.createDate = createDate;
-        this.totalPrice = totalPrice;
+        this.createdate = createdate;
+        this.totalprice = totalprice;
         this.state = state;
     }
 
@@ -56,20 +56,20 @@ public class Order implements Serializable {
         this.buyerId = buyerId;
     }
 
-    public Date getCreateDate() {
-        return createDate;
+    public Date getCreatedate() {
+        return createdate;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setCreatedate(Date createdate) {
+        this.createdate = createdate;
     }
 
-    public Double getTotalPrice() {
-        return totalPrice;
+    public Double getTotalprice() {
+        return totalprice;
     }
 
-    public void setTotalPrice(Double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotalprice(Double totalprice) {
+        this.totalprice = totalprice;
     }
 
     public Integer getState() {
