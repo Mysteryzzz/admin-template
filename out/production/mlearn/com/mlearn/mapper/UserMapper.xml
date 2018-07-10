@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlearn.mapper.UserMapper">
+
+    <resultMap  id="userMapper" type="user">
+        <id property="id" column="id"></id>
+        <result property="username" column="username" />
+        <result property="password" column="password" />
+        <result property="email" column="email" />
+        <result property="islock" column="islock" />
+        <result property="lastdate" column="info" />
+    </resultMap>
+
+    <select id="findAll" resultMap="userMapper">
+        SELECT id, username, email, islock, lastdate FROM user
+    </select>
+
+
+    <!--<insert id="addUser" parameterType="user">-->
+        <!--INSERT INTO user(info, isLock) VALUES (#{info}, #{lock})-->
+    <!--</insert>-->
+
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM user WHERE user.id = #{id}
+    </delete>
+
+    <!--<update id="updateUser" parameterType="user">-->
+        <!--UPDATE user SET info = #{info}, islock = #{lock} WHERE user.id = #{id}-->
+    <!--</update>-->
+
+    <select id="selectUser" parameterType="int">
+        SELECT id, username, password, email, islock, lastdate FROM user
+    </select>
+
+    <select id="updateUserLock">
+        UPDATE user SET islock = #{lock} WHERE user.id = #{id}
+    </select>
+
+
+
+
+</mapper>

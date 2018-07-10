@@ -6,8 +6,6 @@ import com.github.pagehelper.PageInfo;
 import com.mlearn.entity.Order;
 import com.mlearn.service.OrderService;
 import com.mlearn.vo.ResultUtil;
-import jdk.nashorn.internal.runtime.logging.DebugLogger;
-import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

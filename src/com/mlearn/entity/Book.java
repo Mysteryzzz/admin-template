@@ -5,9 +5,9 @@ import java.io.Serializable;
 public class Book implements Serializable {
 
     Integer id;
-    String name;
+    String bookname;
     Double price;
-    String image;
+    String img;
     Integer stock;
 
 
@@ -15,14 +15,14 @@ public class Book implements Serializable {
         super();
     }
 
-    public Book(Integer id, String name, Double price, String image, Integer stock) {
+    public Book(Integer id, String bookname, Double price, String img, Integer stock) {
+        super();
         this.id = id;
-        this.name = name;
+        this.bookname = bookname;
         this.price = price;
-        this.image = image;
+        this.img = img;
         this.stock = stock;
     }
-
 
     public Integer getId() {
         return id;
@@ -32,12 +32,12 @@ public class Book implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getBookname() {
+        return bookname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBookname(String bookname) {
+        this.bookname = bookname;
     }
 
     public Double getPrice() {
@@ -48,12 +48,12 @@ public class Book implements Serializable {
         this.price = price;
     }
 
-    public String getImage() {
-        return image;
+    public String getImg() {
+        return img;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public Integer getStock() {

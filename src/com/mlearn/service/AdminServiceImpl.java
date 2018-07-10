@@ -24,6 +24,9 @@ public class AdminServiceImpl implements AdminService {
 
         try {
             Admin realAdmin = adminMapper.selectByEmail(admin.getEmail());
+            if (realAdmin == null){
+                return false;
+            }
             String password = EncryptUtil.encrypt(admin.getPassword(), realAdmin.getSalt());
 
           if (password.equals(realAdmin.getPassword())) {

@@ -1,0 +1,27 @@
+<!--Navigation Template -->
+<template>
+    <nav class="navbar navbar-fixed-bottom navbar-inverse " role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">图书管理系统</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="userOperation.html">用户管理</a></li>
+                    <li><a href="bookOperation.html">图书管理</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle active" data-toggle="dropdown">
+                            订单管理 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="orderOperation.html">查询订单</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">未签收订单</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</template>
+

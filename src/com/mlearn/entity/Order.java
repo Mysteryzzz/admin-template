@@ -7,7 +7,7 @@ public class Order implements Serializable {
 
     private Integer id;
 
-    private String orderNum;
+    private String ordernum;
 
     private Integer buyerId;
 
@@ -22,10 +22,10 @@ public class Order implements Serializable {
         super();
     }
 
-    public Order(Integer id, String orderNum, Integer buyerId, Date createDate, Double totalPrice, Integer state) {
+    public Order(Integer id, String ordernum, Integer buyerId, Date createDate, Double totalPrice, Integer state) {
         super();
         this.id = id;
-        this.orderNum = orderNum;
+        this.ordernum = ordernum;
         this.buyerId = buyerId;
         this.createDate = createDate;
         this.totalPrice = totalPrice;
@@ -40,12 +40,12 @@ public class Order implements Serializable {
         this.id = id;
     }
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getOrdernum() {
+        return ordernum;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+    public void setOrdernum(String ordernum) {
+        this.ordernum = ordernum;
     }
 
     public Integer getBuyerId() {
