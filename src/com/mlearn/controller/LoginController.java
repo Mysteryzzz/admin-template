@@ -2,7 +2,9 @@ package com.mlearn.controller;
 
 
 import com.mlearn.entity.Admin;
+import com.mlearn.entity.OrderItem;
 import com.mlearn.service.AdminService;
+import com.mlearn.service.OrderService;
 import com.mlearn.vo.ResultUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +17,16 @@ import org.springframework.web.servlet.HttpServletBean;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class LoginController {
 
     @Autowired
     private AdminService adminService;
+
+    @Autowired
+    private OrderService orderService;
 
     private Logger logger = Logger.getLogger(this.getClass());
 
@@ -30,24 +36,6 @@ public class LoginController {
     public ResultUtil login(Admin admin, HttpServletRequest request){
 
         ResultUtil resultUtil = new ResultUtil();
-//
-//
-//        HttpSession session = request.getSession();
-//
-//        session.setAttribute("username", "123");
-//
-//        logger.info(session.getId());
-//
-//        if (session.isNew()){
-//            logger.info("The session has been created Successfully.");
-//        }
-//        else {
-//            logger.warn("The session has already existed.");
-//        }
-//
-//        resultUtil.setCode(200);
-//        resultUtil.setMsg(admin);
-
 
         try {
             if (adminService.login(admin)){
@@ -72,6 +60,24 @@ public class LoginController {
         return resultUtil;
 
     }
+
+//
+//    @ResponseBody
+//    @RequestMapping(value = "/login", method = RequestMethod.GET)
+//    public ResultUtil login(Admin admin, HttpServletRequest request){
+//
+//        ResultUtil resultUtil = new ResultUtil();
+//        List<OrderItem> itemList = orderService.selectByOrderNumber(1);
+//        logger.info(itemList);
+//        resultUtil.setCode(1);
+//        resultUtil.setMsg(itemList);
+//        return resultUtil;
+//
+//    }
+
+
+
+
 
 
 }

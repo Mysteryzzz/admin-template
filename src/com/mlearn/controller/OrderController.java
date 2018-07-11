@@ -48,7 +48,8 @@ public class OrderController {
         logger.info("the different param in the same route");
 
         List<OrderItem> orderItems = orderService.selectByOrderNumber(orderNumber);
-
+        resultUtil.setCode(1);
+        resultUtil.setMsg(orderItems);
 
         return resultUtil;
     }

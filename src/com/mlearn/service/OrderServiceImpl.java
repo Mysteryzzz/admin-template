@@ -34,6 +34,8 @@ public class OrderServiceImpl implements OrderService {
     public List<OrderItem> selectByOrderNumber(Integer orderNumber) {
 
 
-        return null;
+        List<OrderItem> orderItemList = orderMapper.selectByOrderNumber(orderNumber);
+        return orderItemList;
+
     }
 }
