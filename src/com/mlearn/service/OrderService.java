@@ -13,4 +13,6 @@ public interface OrderService {
     void delivery(Integer id);
 
     List<OrderItem> selectByOrderNumber(Integer orderNumber);
+
+    List<Order> findSateList(Integer state);
 }

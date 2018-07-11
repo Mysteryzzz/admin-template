@@ -12,4 +12,6 @@ public interface OrderMapper {
     void updateState(@Param("id") Integer id, @Param("state") Integer state);
 
     List<OrderItem> selectByOrderNumber(Integer orderNumber);
+
+    List<Order> findBySate(@Param("state") Integer state);
 }

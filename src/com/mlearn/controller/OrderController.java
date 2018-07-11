@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -25,20 +26,20 @@ public class OrderController {
 
     private Logger logger = Logger.getLogger(this.getClass());
 
-    @ResponseBody
-    @RequestMapping(value = "/order", method = RequestMethod.GET)
-    public PageInfo list(@RequestParam(value = "pageNumber" , required = false, defaultValue = "1") Integer pageNumber){
-
-        Integer pageSize = 10;
-
-        PageHelper.startPage(pageNumber, pageSize);
-
-        List<Order> orders = orderService.findAll();
-
-        PageInfo pageInfo = new PageInfo(orders);
-
-        return pageInfo;
-    }
+//    @ResponseBody
+//    @RequestMapping(value = "/order", method = RequestMethod.GET)
+//    public PageInfo list(@RequestParam(value = "pageNumber" , required = false, defaultValue = "1") Integer pageNumber){
+//
+//        Integer pageSize = 10;
+//
+//        PageHelper.startPage(pageNumber, pageSize);
+//
+//        List<Order> orders = orderService.findAll();
+//
+//        PageInfo pageInfo = new PageInfo(orders);
+//
+//        return pageInfo;
+//    }
 
     @ResponseBody
     @RequestMapping(value = "/order/info", method = RequestMethod.GET)
@@ -59,7 +60,7 @@ public class OrderController {
 
     @ResponseBody
     @RequestMapping(value = "/order", method = RequestMethod.PUT)
-    private ResultUtil delivery(@RequestBody Map map){
+    public ResultUtil delivery(@RequestBody Map map){
 
         orderService.delivery(Integer.parseInt((String) map.get("id")));
 
@@ -67,6 +68,35 @@ public class OrderController {
 
         return resultUtil;
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/order", method = RequestMethod.GET)
+    public PageInfo state(
+            @RequestParam(value = "state" , required = true) Integer state
+            , @RequestParam(value = "pageNumber" , required = false, defaultValue = "1") Integer pageNumber){
+
+
+        List<Order> orders = null;
+
+        Integer pageSize = 10;
+        PageHelper.startPage(pageNumber, pageSize);
+
+        if (state < 3){
+            orders = orderService.findSateList(state);
+        }
+        else {
+            orders = orderService.findAll();
+        }
+
+        PageInfo pageInfo = new PageInfo(orders);
+
+        return pageInfo;
+    }
+
+
+
+
+
 
 
 

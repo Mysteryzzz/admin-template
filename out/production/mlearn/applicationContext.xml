@@ -23,7 +23,7 @@
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
         <property name="jdbcUrl" value="jdbc:mysql:///ruan15"></property>
         <property name="user" value="root"></property>
-        <property name="password" value="123456"></property>
+        <property name="password" value="1234"></property>
         <property name="initialPoolSize" value="3"></property>
         <property name="maxPoolSize" value="10"></property>
         <property name="maxStatements" value="100"></property>

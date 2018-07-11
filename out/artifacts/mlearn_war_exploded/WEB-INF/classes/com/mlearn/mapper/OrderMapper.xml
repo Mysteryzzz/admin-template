@@ -17,6 +17,11 @@
     </select>
 
 
+    <select id="findBySate" resultMap="orderMapper">
+        SELECT id, ordernum, buyerId, createdate, state, totalprice FROM orders WHERE state = #{state}
+    </select>
+
+
     <update id="updateState">
          UPDATE orders SET state = #{state} WHERE orders.id = #{id}
     </update>
@@ -30,7 +35,6 @@
       INNER JOIN user u
       on u.id = o.buyerId
       where o.ordernum = #{orderNumber}
-
     </select>
 
 </mapper>

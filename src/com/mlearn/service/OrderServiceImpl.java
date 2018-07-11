@@ -38,4 +38,12 @@ public class OrderServiceImpl implements OrderService {
         return orderItemList;
 
     }
+
+    @Override
+    public List<Order> findSateList(Integer state) {
+
+        List<Order> orders = orderMapper.findBySate(state);
+
+        return orders;
+    }
 }
