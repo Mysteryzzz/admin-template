@@ -62,101 +62,105 @@
       <Position>5</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <key id="24" parent="10" name="PRIMARY">
+    <column id="24" parent="10" name="state">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="25" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="25" parent="11" name="id">
+    <column id="26" parent="11" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="26" parent="11" name="orderId">
+    <column id="27" parent="11" name="orderId">
       <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>int(11)|0</DataType>
     </column>
-    <column id="27" parent="11" name="bookId">
+    <column id="28" parent="11" name="bookId">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="28" parent="11" name="num">
+    <column id="29" parent="11" name="num">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="29" parent="11" name="bookId">
+    <index id="30" parent="11" name="bookId">
       <ColNames>bookId</ColNames>
     </index>
-    <index id="30" parent="11" name="orderId">
+    <index id="31" parent="11" name="orderId">
       <ColNames>orderId</ColNames>
     </index>
-    <key id="31" parent="11" name="PRIMARY">
+    <key id="32" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="32" parent="12" name="id">
+    <column id="33" parent="12" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="33" parent="12" name="ordernum">
+    <column id="34" parent="12" name="ordernum">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="34" parent="12" name="buyerId">
+    <column id="35" parent="12" name="buyerId">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="35" parent="12" name="totalprice">
+    <column id="36" parent="12" name="totalprice">
       <Position>4</Position>
       <DataType>double|0</DataType>
     </column>
-    <column id="36" parent="12" name="createdate">
+    <column id="37" parent="12" name="createdate">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="37" parent="12" name="state">
+    <column id="38" parent="12" name="state">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="38" parent="12" name="buyerId">
+    <index id="39" parent="12" name="buyerId">
       <ColNames>buyerId</ColNames>
     </index>
-    <key id="39" parent="12" name="PRIMARY">
+    <key id="40" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="40" parent="13" name="id">
+    <column id="41" parent="13" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="41" parent="13" name="username">
+    <column id="42" parent="13" name="username">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="42" parent="13" name="password">
+    <column id="43" parent="13" name="password">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="43" parent="13" name="email">
+    <column id="44" parent="13" name="email">
       <Position>4</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="44" parent="13" name="islock">
+    <column id="45" parent="13" name="islock">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="45" parent="13" name="lastdate">
+    <column id="46" parent="13" name="lastdate">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <key id="46" parent="13" name="PRIMARY">
+    <key id="47" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

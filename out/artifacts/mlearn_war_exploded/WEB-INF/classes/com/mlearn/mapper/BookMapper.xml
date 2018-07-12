@@ -13,7 +13,22 @@
     </resultMap>
 
     <select id="findAll" resultMap="bookMapper">
-        SELECT id, bookname, price, img, stock FROM books
+        SELECT id, bookname, price, img, stock FROM books WHERE state = 1
     </select>
+
+    <update id="deleteById">
+        UPDATE books SET state = 0 WHERE id = #{id}
+    </update>
+
+    <select id="findBookInOrder" resultType="Integer">
+        SELECT count(*) FROM orderitems WHERE bookId = #{id}
+    </select>
+
+    <update id="update" parameterType="book" useGeneratedKeys="true" keyProperty="id">
+        UPDATE books SET bookname = #{bookname}, price = #{price}, img = #{img}, stock = #{stock}
+        WHERE id = #{id}
+    </update>
+
+
 
 </mapper>

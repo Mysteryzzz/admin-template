@@ -32,6 +32,10 @@
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-tx-4.3.5.RELEASE.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.5.RELEASE.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.5.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-pool2-2.4.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jedis-2.8.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.3.3.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="mlearn/web/Web" />
