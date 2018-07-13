@@ -13,4 +13,6 @@ public interface BookMapper {
     Integer findBookInOrder(Integer id);
 
     void update(Book book);
+
+    void add(Book book);
 }

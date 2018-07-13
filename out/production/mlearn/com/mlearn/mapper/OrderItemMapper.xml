@@ -4,7 +4,7 @@
 <mapper namespace="com.mlearn.mapper.OrderItemMapper">
 
     <resultMap  id="orderItemMapper" type="orderItem">
-        <id property="id" column="id"></id>
+        <id property="id" column="iid"></id>
         <result property="num" column="num" />
 
         <association property="order" resultMap="com.mlearn.mapper.OrderMapper.orderMapper"></association>

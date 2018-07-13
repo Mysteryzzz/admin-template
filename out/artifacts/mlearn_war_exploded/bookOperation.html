@@ -89,8 +89,8 @@
     </div>
 </div>
 
-<!--Add Modal -->
-<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--Add Or Update Modal -->
+<div class="modal fade" id="aouModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -99,15 +99,21 @@
                 <h4 class="modal-title">图书信息</h4>
             </div>
             <div class="modal-body">
-                <form enctype="multipart/form-data">
+                <form id="bookForm">
+                    <div class="input-group">
+                        <span class="input-group-addon">图书</span>
+                        <input id="bookId" name="id" type="text" class="form-control hidden"
+                               aria-describedby="basic-addon1">
+                    </div>
                     <div class="input-group">
                         <span class="input-group-addon">图书名称</span>
-                        <input id="bookId" name="bookname" type="text" class="form-control" aria-describedby="basic-addon1">
+                        <input id="bookName" name="bookname" type="text" class="form-control"
+                               aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group">
                         <span class="input-group-addon">图书价格</span>
-                        <input id="bookName" name="price" type="text" class="form-control"
+                        <input id="bookPrice" name="price" type="text" class="form-control"
                                aria-describedby="basic-addon1">
                     </div>
 
@@ -117,13 +123,14 @@
                                aria-describedby="basic-addon1">
                     </div>
 
-                    <div class="input-group">
-                        <span class="input-group-addon">图书图片</span>
-                        <input id="bookImg" name="file" type="file" class="form-control file"
-                               aria-describedby="basic-addon1">
-                    </div>
+
                 </form>
 
+                <div class="input-group">
+                    <span class="input-group-addon">图书图片</span>
+                    <input id="bookImg" name="file" type="file" class="form-control file"
+                           aria-describedby="basic-addon1">
+                </div>
 
             </div>
             <div class="modal-footer">
@@ -203,8 +210,11 @@
                         tr.append($("<td></td>").text(id));
                         tr.append($("<td></td>").text(name));
                         tr.append($("<td></td>").text(price));
+                        tr.append($("<td></td>").append($("<img></img>").attr(
+                            {
+                                "src": img, "height": 92, "width": 92
+                            })));
                         tr.append($("<td></td>").text(stock));
-                        tr.append($("<td></td>").append($("<image></image>").attr({"src": img})));
                         let buttonGroup = $("<td></td>");
                         buttonGroup.append($("<button></button>").attr({
                             onclick: "javascript:deleteThis(this)",
@@ -251,45 +261,52 @@
 
 
     $('#saveBtn').click(function () {
-        addOrUpdate();
+        let aou = $("#saveBtn").text();
+        addOrUpdate(aou);
     });
 
-    function addOrUpdate() {
-        var formData = new FormData($("#uploadForm")[0]);
+    function addOrUpdate(aou) {
+        let formData = new FormData($("#bookForm")[0]);
+        let imgFile = $("#bookImg").prop("files")[0];
+        formData.append("file", imgFile);
+        if (aou === "add"){
+            formData.delete("id");
+        }
         $.ajax({
-            async : true,
-            cache : flase,
-            type : "post",
-            data : formData,
-            url : 'http://localhost:8080/ajaxupload',
-            dataType : 'json',
+            async: true,
+            cache: false,
+            type: "post",
+            data: formData,
+            url: '/book/' + aou,
+            dataType: 'json',
             contentType: false, //必须
             processData: false, //必须
-            success : function() {
-                console.log('success');
+            success: function (data, status) {
+                console.log(data);
+                if (data.code === 200) {
+                    window.location.href = "bookOperation.html"
+                }
+
             },
-            error : function(arg1, arg2, arg3) {
+            error: function (arg1, arg2, arg3) {
                 console.log(arg1 + "--" + arg2 + "--" + arg3);
             }
         });
 
 
-
     };
-
-
 
 
     $('#deleteSure').click(function () {
         $.get(
-            "/student/delete",
+            "/book/delete",
             {
                 "id": $('#delId').text()
             },
             function (data, status) {
-                if (status === "success" && data === "success") {
+                if (status === "success" && data.msg === "success") {
                     alert("删除成功");
-                    window.location.reload();
+                    window.location.href = "bookOperation.html";
                 }
                 else {
                     alert("删除失败");
@@ -297,18 +314,44 @@
             }
         );
     });
-
-
+    
     $('#addBtn').click(function () {
         //clear the form
+        $('#bookId').remove();
         $('#bookName').val("");
         $('#bookStock').val("");
+        $('#bookPrice').val("");
         $('#bookImg').val("");
-        $('#saveBtn').text('Add');
-        $('#addModal').modal('show');
+        $('#saveBtn').text('add');
+        $('#aouModal').modal('show');
     });
 
+    function update(object) {
+        let tr = $(object).parent().parent();
+        let bookId = tr.children('td').eq(0).text();
+        let bookName = tr.children('td').eq(1).text();
+        let bookPrice = tr.children('td').eq(2).text();
+        let bookImg = tr.children('td').eq(3).text();
+        let bookStock = tr.children('td').eq(4).text();
+        console.log(bookName);
+        console.log(bookImg);
+        console.log(bookId);
+        // assign the row to the modal
+        $('#bookId').val(bookId);
+        $('#bookName').val(bookName);
+        $('#bookStock').val(bookStock);
+        $('#bookPrice').val(bookPrice);
+        $('#bookImg').val(bookImg);
+        $('#saveBtn').text('update');
+        $('#aouModal').modal('show');
+    };
 
+
+    $('#bookImg').change(function () {
+        
+    });
+    
+    
 </script>
 
 

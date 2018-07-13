@@ -7,29 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a590dfcc-9f26-4223-9020-2d9da0467f8f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/applicationContext-redis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mlearn/util/CacheUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mlearn/util/JsonUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/redis.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test/util/EmployeeService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/48013aeb-2d23-41e8-920f-17ec94f71670.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mlearn_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mlearn_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mlearn/util/FileUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/mlearn_war_exploded/WEB-INF/classes/com/mlearn/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/mlearn_war_exploded/WEB-INF/classes/com/mlearn/mapper/BookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/mlearn_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/mlearn_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/mlearn_war_exploded/bookOperation.html" afterPath="$PROJECT_DIR$/out/artifacts/mlearn_war_exploded/bookOperation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mlearn/com/mlearn/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/out/production/mlearn/com/mlearn/mapper/BookMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/controller/BookController.java" afterPath="$PROJECT_DIR$/src/com/mlearn/controller/BookController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/entity/Book.java" afterPath="$PROJECT_DIR$/src/com/mlearn/entity/Book.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.java" afterPath="$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/mapper/OrderItemMapper.xml" afterPath="$PROJECT_DIR$/src/com/mlearn/mapper/OrderItemMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.xml" afterPath="$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/com/mlearn/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/service/BookSeriveImpl.java" afterPath="$PROJECT_DIR$/src/com/mlearn/service/BookSeriveImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mlearn/service/BookService.java" afterPath="$PROJECT_DIR$/src/com/mlearn/service/BookService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookOperation.html" afterPath="$PROJECT_DIR$/web/bookOperation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/orderOperation.html" afterPath="$PROJECT_DIR$/web/orderOperation.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +54,7 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="ruan15@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="ruan15" type="e3449647:DbNodeDescriptor" />
-        <item name="books" type="e3449647:DbNodeDescriptor" />
+        <item name="orders" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -71,58 +64,35 @@
       <file leaf-file-name="bookOperation.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/bookOperation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="259" column="24" lean-forward="false" selection-start-line="259" selection-start-column="24" selection-end-line="259" selection-end-column="24" />
+            <state relative-caret-position="401">
+              <caret line="350" column="8" lean-forward="true" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="8" />
               <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#3167#3174#1" expanded="true" />
+                <element signature="e#3177#3184#1" expanded="true" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#5166#5173#1" expanded="true" />
-                <element signature="e#6283#9146#0" expanded="false" />
-                <element signature="e#10081#10508#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mlearn/controller/BookController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderItemMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderItemMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="26" column="84" lean-forward="false" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
-              <folding>
-                <marker date="1531389972875" expanded="true" signature="578:627" ph="SELECT id, b... books" />
-                <marker date="1531389972875" expanded="true" signature="578:643" ph="SELECT id, b... books" />
-                <marker date="1531389972875" expanded="true" signature="696:739" ph="UPDATE books... " />
-                <marker date="1531389972875" expanded="true" signature="702:739" ph="DELETE FROM " />
-                <marker date="1531389972875" expanded="true" signature="818:870" ph="SELECT count... orderitems" />
-                <marker date="1531389972875" expanded="true" signature="981:1095" ph="UPDATE books... " />
+                <element signature="e#5471#5478#1" expanded="true" />
+                <element signature="e#6478#6548#0" expanded="false" />
+                <element signature="e#6588#9565#0" expanded="false" />
+                <element signature="e#9600#9773#0" expanded="false" />
+                <element signature="e#9813#9886#0" expanded="false" />
+                <element signature="e#9920#10772#0" expanded="false" />
+                <element signature="e#10815#11262#0" expanded="false" />
+                <element signature="e#11305#11570#0" expanded="false" />
+                <element signature="e#11602#12322#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -147,22 +117,25 @@
         <option value="$PROJECT_DIR$/src/com/mlearn/service/OrderService.java" />
         <option value="$PROJECT_DIR$/src/com/mlearn/service/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/mlearn/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.xml" />
         <option value="$PROJECT_DIR$/web/static/html/navigation.html" />
-        <option value="$PROJECT_DIR$/web/orderOperation.html" />
         <option value="$PROJECT_DIR$/src/com/mlearn/util/CacheUtil.java" />
         <option value="$PROJECT_DIR$/src/com/mlearn/util/JsonUtil.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/test/test/util/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/applicationContext-redis.xml" />
-        <option value="$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.java" />
         <option value="$PROJECT_DIR$/src/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/com/mlearn/service/BookService.java" />
-        <option value="$PROJECT_DIR$/src/com/mlearn/service/BookSeriveImpl.java" />
         <option value="$PROJECT_DIR$/src/com/mlearn/entity/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/mlearn/service/BookSeriveImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/mlearn/mapper/OrderItemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/mlearn/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/mlearn/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/com/mlearn/controller/BookController.java" />
+        <option value="$PROJECT_DIR$/src/com/mlearn/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/web/orderOperation.html" />
         <option value="$PROJECT_DIR$/web/bookOperation.html" />
       </list>
     </option>
@@ -206,6 +179,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,6 +211,13 @@
               <item name="mlearn" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mlearn" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mlearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlearn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mlearn" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -244,6 +226,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mlearn" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mlearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlearn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mlearn" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mlearn" type="b2602c69:ProjectViewProjectNode" />
@@ -284,21 +273,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/jedis-2.8.2.jar!/" />
+    <property name="last_opened_file_path" value="D:/images" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -329,6 +316,11 @@
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
+        <file path="D:/images">
+          <settings>
+            <option name="CONTEXT_PATH" value="/images" />
+          </settings>
+        </file>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_mlearn_2" />
@@ -488,18 +480,21 @@
       <workItem from="1531292935093" duration="9117000" />
       <workItem from="1531377584937" duration="8847000" />
       <workItem from="1531387090214" duration="28000" />
-      <workItem from="1531388416342" duration="2852000" />
+      <workItem from="1531388416342" duration="3007000" />
+      <workItem from="1531439878853" duration="259000" />
+      <workItem from="1531440478734" duration="11747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20844000" />
+    <option name="totallyTimeSpent" value="33005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41847825" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42826086" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -515,12 +510,13 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42826086" sideWeight="0.4914712" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41847825" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3423913" sideWeight="0.49555555" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15458423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34252387" sideWeight="0.49555555" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15778251" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -529,7 +525,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +534,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -552,27 +549,19 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#3167#3174#1" expanded="true" />
+            <element signature="e#3177#3184#1" expanded="true" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#5166#5173#1" expanded="true" />
-            <element signature="e#6283#9146#0" expanded="false" />
-            <element signature="e#10081#10508#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bookOperation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#3167#3174#1" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#5166#5173#1" expanded="true" />
-            <element signature="e#6283#9146#0" expanded="false" />
-            <element signature="e#10081#10508#0" expanded="false" />
+            <element signature="e#5471#5478#1" expanded="true" />
+            <element signature="e#6478#6548#0" expanded="false" />
+            <element signature="e#6588#9565#0" expanded="false" />
+            <element signature="e#9600#9773#0" expanded="false" />
+            <element signature="e#9813#9886#0" expanded="false" />
+            <element signature="e#9920#10772#0" expanded="false" />
+            <element signature="e#10815#11262#0" expanded="false" />
+            <element signature="e#11305#11570#0" expanded="false" />
+            <element signature="e#11602#12322#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/48013aeb-2d23-41e8-920f-17ec94f71670/console.sql" />
     <entry file="das://table:/42499080/48013aeb-2d23-41e8-920f-17ec94f71670/ruan15.user" />
     <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/UserMapper.java">
@@ -637,74 +619,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="74" column="40" lean-forward="false" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/42499080/48013aeb-2d23-41e8-920f-17ec94f71670/ruan15.orders" />
     <entry file="das://table:/42499080/48013aeb-2d23-41e8-920f-17ec94f71670/ruan15.orderitems" />
-    <entry file="file://$PROJECT_DIR$/web/orderOperation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="172" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="253" selection-end-column="7" />
-          <folding>
-            <element signature="e#6420#7097#0" expanded="false" />
-            <element signature="e#7132#8175#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/42499080/48013aeb-2d23-41e8-920f-17ec94f71670/ruan15.books" />
     <entry file="file://$PROJECT_DIR$/src/redis.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ruan15.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <marker date="1531292204929" expanded="true" signature="0:286" ph="/* Navicat M... " />
-            <marker date="1531292204929" expanded="true" signature="410:438" ph="DROP TABLE I... " />
-            <marker date="1531292204929" expanded="true" signature="440:671" ph="CREATE TABLE... admin" />
-            <marker date="1531292204929" expanded="true" signature="758:912" ph="INSERT INTO `admin`... " />
-            <marker date="1531292204929" expanded="true" signature="1039:1067" ph="DROP TABLE I... " />
-            <marker date="1531292204929" expanded="true" signature="1069:1366" ph="CREATE TABLE... books" />
-            <marker date="1531292204929" expanded="true" signature="1453:1532" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="1534:1613" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="1615:1696" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="1698:1779" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="1781:1861" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="1863:1943" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="1945:2026" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="2028:2108" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="2110:2190" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="2192:2276" ph="INSERT INTO `books`... " />
-            <marker date="1531292204929" expanded="true" signature="2379:2412" ph="DROP TABLE I... " />
-            <marker date="1531292204929" expanded="true" signature="2414:2713" ph="CREATE TABLE... orderitems" />
-            <marker date="1531292204929" expanded="true" signature="2805:2857" ph="INSERT INTO `orderitems`... " />
-            <marker date="1531292204929" expanded="true" signature="2956:2985" ph="DROP TABLE I... " />
-            <marker date="1531292204929" expanded="true" signature="2987:3337" ph="CREATE TABLE... orders" />
-            <marker date="1531292204929" expanded="true" signature="3425:3485" ph="INSERT INTO `orders`... " />
-            <marker date="1531292204929" expanded="true" signature="3582:3609" ph="DROP TABLE I... " />
-            <marker date="1531292204929" expanded="true" signature="3611:3933" ph="CREATE TABLE... user" />
-            <marker date="1531292204929" expanded="true" signature="4019:4102" ph="INSERT INTO `user`... " />
-            <marker date="1531292204929" expanded="true" signature="4104:4178" ph="INSERT INTO `user`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,19 +636,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ba89e0de-3a55-4d25-b3e3-5ba3d5717983/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ba89e0de-3a55-4d25-b3e3-5ba3d5717983/console.sql" />
     <entry file="file://$PROJECT_DIR$/test/test/util/EmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -762,14 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/42499080/ba89e0de-3a55-4d25-b3e3-5ba3d5717983/ruan15.books">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -798,63 +705,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding>
-            <marker date="1531301941072" expanded="true" signature="659:730" ph="SELECT id, o... orders" />
-            <marker date="1531301941072" expanded="true" signature="808:902" ph="SELECT id, o... orders" />
-            <marker date="1531301941072" expanded="true" signature="958:1016" ph="UPDATE order... " />
-            <marker date="1531301941072" expanded="true" signature="1158:1412" ph="select item.... orders" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mlearn/entity/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/service/BookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/service/BookSeriveImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="48" column="25" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-          <folding>
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/entity/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="88" column="20" lean-forward="true" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,48 +720,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.xml">
+    <entry file="file://$PROJECT_DIR$/ruan15.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="26" column="84" lean-forward="false" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
-          <folding>
-            <marker date="1531389972875" expanded="true" signature="578:627" ph="SELECT id, b... books" />
-            <marker date="1531389972875" expanded="true" signature="578:643" ph="SELECT id, b... books" />
-            <marker date="1531389972875" expanded="true" signature="696:739" ph="UPDATE books... " />
-            <marker date="1531389972875" expanded="true" signature="702:739" ph="DELETE FROM " />
-            <marker date="1531389972875" expanded="true" signature="818:870" ph="SELECT count... orderitems" />
-            <marker date="1531389972875" expanded="true" signature="981:1095" ph="UPDATE books... " />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mlearn/controller/BookController.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/87a5130e-0129-41d1-a6b5-eca6d5af42b5/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/service/BookSeriveImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/entity/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderItemMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="125">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding>
+            <marker date="1531449004397" expanded="true" signature="656:728" ph="SELECT id, o... orders" />
+            <marker date="1531449004397" expanded="true" signature="806:901" ph="SELECT id, o... orders" />
+            <marker date="1531449004397" expanded="true" signature="957:1016" ph="UPDATE order... " />
+            <marker date="1531449004397" expanded="true" signature="1158:1410" ph="select item.... orders" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <marker date="1531449004445" expanded="true" signature="639:694" ph="SELECT uid, user" />
+            <marker date="1531449004445" expanded="true" signature="916:955" ph="DELETE FROM " />
+            <marker date="1531449004445" expanded="true" signature="1193:1258" ph="SELECT uid, user" />
+            <marker date="1531449004445" expanded="true" signature="1315:1370" ph="UPDATE user " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/AdminMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1531292204943" expanded="true" signature="538:604" ph="SELECT id, e... admin" />
+            <marker date="1531292204943" expanded="true" signature="657:705" ph="UPDATE admin... " />
+            <marker date="1531292204943" expanded="true" signature="762:818" ph="UPDATE admin... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/BookMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <marker date="1531449004563" expanded="true" signature="574:624" ph="SELECT id, b... books" />
+            <marker date="1531449004563" expanded="true" signature="574:648" ph="SELECT id, b... books" />
+            <marker date="1531449004563" expanded="true" signature="701:753" ph="UPDATE books... " />
+            <marker date="1531449004563" expanded="true" signature="707:753" ph="DELETE FROM " />
+            <marker date="1531449004563" expanded="true" signature="832:892" ph="SELECT count... orderitems" />
+            <marker date="1531449004563" expanded="true" signature="962:1077" ph="UPDATE books... " />
+            <marker date="1531449004563" expanded="true" signature="1186:1291" ph="INSERT INTO books... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/mapper/OrderItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/42499080/87a5130e-0129-41d1-a6b5-eca6d5af42b5/ruan15.orderitems">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/42499080/87a5130e-0129-41d1-a6b5-eca6d5af42b5/ruan15.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/42499080/87a5130e-0129-41d1-a6b5-eca6d5af42b5/ruan15.orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mlearn/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/42499080/87a5130e-0129-41d1-a6b5-eca6d5af42b5/ruan15.books">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/orderOperation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="246" column="4" lean-forward="false" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#3300#3385#0" expanded="false" />
+            <element signature="e#3435#6387#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bookOperation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="259" column="24" lean-forward="false" selection-start-line="259" selection-start-column="24" selection-end-line="259" selection-end-column="24" />
+        <state relative-caret-position="401">
+          <caret line="350" column="8" lean-forward="true" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="8" />
           <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#3167#3174#1" expanded="true" />
+            <element signature="e#3177#3184#1" expanded="true" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#5166#5173#1" expanded="true" />
-            <element signature="e#6283#9146#0" expanded="false" />
-            <element signature="e#10081#10508#0" expanded="false" />
+            <element signature="e#5471#5478#1" expanded="true" />
+            <element signature="e#6478#6548#0" expanded="false" />
+            <element signature="e#6588#9565#0" expanded="false" />
+            <element signature="e#9600#9773#0" expanded="false" />
+            <element signature="e#9813#9886#0" expanded="false" />
+            <element signature="e#9920#10772#0" expanded="false" />
+            <element signature="e#10815#11262#0" expanded="false" />
+            <element signature="e#11305#11570#0" expanded="false" />
+            <element signature="e#11602#12322#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,6 +1004,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -182,7 +182,6 @@
         );
     }
 
-
     function delivery(object) {
         let tr = $(object).parent().parent();
         let id = tr.children('td').eq(0).text();
@@ -220,7 +219,7 @@
                 $.each(list, function (index, item) {
                     let tr = $("<tr></tr>");
                     let id = item.book.id;
-                    let name = item.book.name;
+                    let name = item.book.bookname;
                     let price = item.book.price;
                     let img = item.book.img;
                     let count = item.num;
@@ -229,7 +228,11 @@
                     tr.append($("<td></td>").text(id));
                     tr.append($("<td></td>").text(name));
                     tr.append($("<td></td>").text(price));
-                    tr.append($("<td></td>").append($("<image></image>").attr({"src":img})));
+                    tr.append($("<td></td>").append($("<img></img>").attr({
+                        "src":img,
+                        "height": 92,
+                        "width" : 92
+                    })));
                     tr.append($("<td></td>").text(count));
 
 
@@ -239,12 +242,8 @@
 
             }
         );
-
-
         $('#infoModal').modal('show');
     }
-
-
 
 
 

@@ -4,7 +4,7 @@
 <mapper namespace="com.mlearn.mapper.UserMapper">
 
     <resultMap  id="userMapper" type="user">
-        <id property="id" column="id"></id>
+        <id property="id" column="uid"/>
         <result property="username" column="username" />
         <result property="password" column="password" />
         <result property="email" column="email" />
@@ -13,7 +13,7 @@
     </resultMap>
 
     <select id="findAll" resultMap="userMapper">
-        SELECT id, username, email, islock, lastdate FROM user
+        SELECT uid, username, email, islock, lastdate FROM user
     </select>
 
 
@@ -22,7 +22,7 @@
     <!--</insert>-->
 
     <delete id="deleteUser" parameterType="int">
-        DELETE FROM user WHERE user.id = #{id}
+        DELETE FROM user WHERE user.uid = #{id}
     </delete>
 
     <!--<update id="updateUser" parameterType="user">-->
@@ -30,11 +30,11 @@
     <!--</update>-->
 
     <select id="selectUser" parameterType="int">
-        SELECT id, username, password, email, islock, lastdate FROM user
+        SELECT uid, username, password, email, islock, lastdate FROM user
     </select>
 
     <select id="updateUserLock">
-        UPDATE user SET islock = #{lock} WHERE user.id = #{id}
+        UPDATE user SET islock = #{lock} WHERE user.uid = #{id}
     </select>
 
 

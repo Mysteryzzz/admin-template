@@ -4,31 +4,36 @@
 <mapper namespace="com.mlearn.mapper.BookMapper">
 
     <resultMap  id="bookMapper" type="book">
-        <id property="id" column="id"></id>
+        <id property="id" column="bid"/>
         <result property="bookname" column="bookname" />
         <result property="price" column="price" />
         <result property="img" column="img" />
         <result property="stock" column="stock" />
-
     </resultMap>
 
     <select id="findAll" resultMap="bookMapper">
-        SELECT id, bookname, price, img, stock FROM books WHERE state = 1
+        SELECT bid, bookname, price, img, stock FROM books
+        WHERE state = 1
     </select>
 
     <update id="deleteById">
-        UPDATE books SET state = 0 WHERE id = #{id}
+        UPDATE books SET state = 0
+        WHERE bid = #{id}
     </update>
 
     <select id="findBookInOrder" resultType="Integer">
-        SELECT count(*) FROM orderitems WHERE bookId = #{id}
+        SELECT count(*) FROM orderitems
+        WHERE bookId = #{id}
     </select>
 
-    <update id="update" parameterType="book" useGeneratedKeys="true" keyProperty="id">
+    <update id="update" parameterType="book">
         UPDATE books SET bookname = #{bookname}, price = #{price}, img = #{img}, stock = #{stock}
-        WHERE id = #{id}
+        WHERE bid = #{id}
     </update>
 
+    <insert id="add" parameterType="book" useGeneratedKeys="true" keyProperty="bid">
+        INSERT INTO books(bookname, price, stock, img, state) VALUES (#{bookname}, #{price}, #{stock}, #{img}, 1)
+    </insert>
 
 
 </mapper>

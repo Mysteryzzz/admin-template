@@ -4,7 +4,7 @@
 <mapper namespace="com.mlearn.mapper.OrderMapper">
 
     <resultMap id="orderMapper" type="order">
-        <id property="id" column="id"></id>
+        <id property="id" column="oid"/>
         <result property="ordernum" column="ordernum" />
         <result property="buyerId" column="buyerId" />
         <result property="createdate" column="createdate" />
@@ -13,27 +13,27 @@
     </resultMap>
 
     <select id="findAll" resultMap="orderMapper">
-        SELECT id, ordernum, buyerId, createdate, state, totalprice FROM orders
+        SELECT oid, ordernum, buyerId, createdate, state, totalprice FROM orders
     </select>
 
 
     <select id="findBySate" resultMap="orderMapper">
-        SELECT id, ordernum, buyerId, createdate, state, totalprice FROM orders WHERE state = #{state}
+        SELECT oid, ordernum, buyerId, createdate, state, totalprice FROM orders WHERE state = #{state}
     </select>
 
 
     <update id="updateState">
-         UPDATE orders SET state = #{state} WHERE orders.id = #{id}
+         UPDATE orders SET state = #{state} WHERE orders.oid = #{id}
     </update>
 
     <select id="selectByOrderNumber" parameterType="int" resultMap="com.mlearn.mapper.OrderItemMapper.orderItemMapper">
-      select item.*, o.*, b.*, u.id from orders o
+      select item.*, o.*, b.*, u.uid from orders o
       INNER JOIN orderitems item
-      on o.ordernum = item.orderId
+      on o.oid = item.orderId
       INNER JOIN books b
-      on b.id = item.bookId
+      on b.bid = item.bookId
       INNER JOIN user u
-      on u.id = o.buyerId
+      on u.uid = o.buyerId
       where o.ordernum = #{orderNumber}
     </select>
 

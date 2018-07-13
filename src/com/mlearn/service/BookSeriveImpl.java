@@ -46,6 +46,9 @@ public class BookSeriveImpl implements BookService {
 
     @Override
     public void add(Book book) {
+        bookMapper.add(book);
+
+
         logger.info(book);
     }
 }
