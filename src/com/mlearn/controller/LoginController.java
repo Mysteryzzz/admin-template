@@ -25,9 +25,6 @@ public class LoginController {
     @Autowired
     private AdminService adminService;
 
-    @Autowired
-    private OrderService orderService;
-
     private Logger logger = Logger.getLogger(this.getClass());
 
 
@@ -61,19 +58,18 @@ public class LoginController {
 
     }
 
-//
-//    @ResponseBody
-//    @RequestMapping(value = "/login", method = RequestMethod.GET)
-//    public ResultUtil login(Admin admin, HttpServletRequest request){
-//
-//        ResultUtil resultUtil = new ResultUtil();
-//        List<OrderItem> itemList = orderService.selectByOrderNumber(1);
-//        logger.info(itemList);
-//        resultUtil.setCode(1);
-//        resultUtil.setMsg(itemList);
-//        return resultUtil;
-//
-//    }
+
+    @ResponseBody
+    @RequestMapping(value = "/logout")
+    public ResultUtil logout(HttpServletRequest request){
+        ResultUtil resultUtil = new ResultUtil();
+        request.getSession().invalidate();
+        resultUtil.setCode(200);
+        resultUtil.setMsg("success");
+        return resultUtil;
+    }
+
+
 
 
 
