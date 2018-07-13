@@ -18,5 +18,5 @@ public interface UserMapper {
 
     User selectUser(Integer id);
 
-    void updateUserLock(@Param("id") Integer id, @Param("lock") Boolean lock);
+    void updateUserLock(@Param("id") Integer id, @Param("lock") Integer lock);
 }

@@ -7,7 +7,7 @@ public class User implements Serializable{
 
     Integer id;
     String username;
-    Boolean password;
+    String password;
     String email;
     Integer islock;
     Date lastdate;
@@ -18,7 +18,7 @@ public class User implements Serializable{
     }
 
 
-    public User(Integer id, String username, Boolean password, String email, Integer islock, Date lastdate) {
+    public User(Integer id, String username, String password, String email, Integer islock, Date lastdate) {
         super();
         this.id = id;
         this.username = username;
@@ -44,11 +44,11 @@ public class User implements Serializable{
         this.username = username;
     }
 
-    public Boolean getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Boolean password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

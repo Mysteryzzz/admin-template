@@ -1,13 +1,11 @@
 package com.mlearn.util;
 
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Component;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-//@Component
+import javax.annotation.Resource;
+
+
 public class CacheUtil {
 
 	@Resource
@@ -22,7 +20,7 @@ public class CacheUtil {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("��ȡ�����쳣");
+
 		}
 		
 		return info;
@@ -36,7 +34,7 @@ public class CacheUtil {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("��ȡ�����쳣");
+
 		}
 		
 	}

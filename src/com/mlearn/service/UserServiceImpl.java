@@ -16,6 +16,7 @@ public class UserServiceImpl implements UserService {
 
 
 
+    @Override
     public List<User> findAll() {
         List<User> users = userMapper.findAll();
         return users;
@@ -36,7 +37,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void lockUser(Integer id) {
-        userMapper.updateUserLock(id, true);
+        userMapper.updateUserLock(id, 3);
     }
 
     @Override
@@ -59,7 +60,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void unlockUser(Integer id) {
 
-        userMapper.updateUserLock(id, false);
+        userMapper.updateUserLock(id, 0);
 
     }
 }
