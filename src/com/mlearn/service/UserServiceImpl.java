@@ -15,35 +15,39 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
 
-
     @Override
     public List<User> findAll() {
-        List<User> users = userMapper.findAll();
+        List<User> users = null;
+        try {
+            users = userMapper.findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Not found");
+        }
         return users;
     }
 
-//    @Override
-//    public void addUser(User user) {
-//
-//        userMapper.addUser(user);
-//
-//
-//    }
-
-//    @Override
-//    public void updateUser(User user) {
-//        userMapper.updateUser(user);
-//    }
 
     @Override
     public void lockUser(Integer id) {
-        userMapper.updateUserLock(id, 3);
+
+        try {
+            userMapper.updateUserLock(id, 3);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("lock failed");
+        }
     }
 
     @Override
     public void deleteUser(Integer id) {
 
-        userMapper.deleteUser(id);
+        try {
+            userMapper.deleteUser(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("delete failed");
+        }
 
 
     }
@@ -51,8 +55,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public User selectUser(Integer id) {
 
-        User user = userMapper.selectUser(id);
-
+        User user = null;
+        try {
+            user = userMapper.selectUser(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("not found.");
+        }
 
         return user;
     }
@@ -60,7 +69,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public void unlockUser(Integer id) {
 
-        userMapper.updateUserLock(id, 0);
+        try {
+            userMapper.updateUserLock(id, 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("unlock failed");
+        }
 
     }
 }

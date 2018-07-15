@@ -29,4 +29,12 @@ public class ResultUtil {
     public void setMsg(Object msg) {
         this.msg = msg;
     }
+
+    @Override
+    public String toString() {
+        return "ResultUtil{" +
+                "code1=" + code +
+                ", msg=" + msg +
+                '}';
+    }
 }

@@ -19,7 +19,15 @@ public class BookSeriveImpl implements BookService {
 
     @Override
     public List<Book> findAll() {
-        return bookMapper.findAll();
+        List<Book> books = null;
+
+        try {
+            books = bookMapper.findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("not found");
+        }
+        return books;
     }
 
 
@@ -31,23 +39,33 @@ public class BookSeriveImpl implements BookService {
                 bookMapper.deleteById(id);
             }
             else {
-                throw new Exception("The book was found in orders");
+                throw new RuntimeException("The book was found in orders");
             }
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Can not delete");
         }
     }
 
     @Override
     public void update(Book book) {
-        bookMapper.update(book);
+        try {
+            bookMapper.update(book);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Can not update");
+        }
     }
 
     @Override
     public void add(Book book) {
-        bookMapper.add(book);
-
+        try {
+            bookMapper.add(book);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Can not add");
+        }
 
         logger.info(book);
     }

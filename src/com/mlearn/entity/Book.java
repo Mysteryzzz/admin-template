@@ -4,6 +4,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serializable;
 
+/**
+ * @author rezero
+ */
 public class Book implements Serializable {
 
     private Integer id;

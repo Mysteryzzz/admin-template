@@ -8,8 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-
-
+/**
+ * @author rezero
+ */
 @Service
 public class AdminServiceImpl implements AdminService {
 
@@ -40,7 +41,7 @@ public class AdminServiceImpl implements AdminService {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("login failed");
         }
-        return false;
     }
 }

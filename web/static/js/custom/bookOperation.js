@@ -176,3 +176,8 @@ $('#logout').click(function () {
         }
     );
 });
+
+$("#bookImg").change(function () {
+    let url = window.URL.createObjectURL(this.files[0]);
+    $("#preview").attr({"src" : url});
+});

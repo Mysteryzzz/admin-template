@@ -5,6 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.mlearn.entity.Book;
 import com.mlearn.service.BookService;
+import com.mlearn.util.QiniuUtil;
 import com.mlearn.vo.ResultUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 
 import com.mlearn.util.FileUtil;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class BookController {
@@ -81,6 +85,8 @@ public class BookController {
         return resultUtil;
     }
 
+
+
     @ResponseBody
     @RequestMapping("/book/add")
     public ResultUtil add(Book book, HttpServletRequest request) {
@@ -88,7 +94,11 @@ public class BookController {
         ResultUtil resultUtil = new ResultUtil();
 
         try {
-            book.setImg(FileUtil.saveFileReturnPath(book.getFile(), "images"));
+            String fileName = UUID.randomUUID().toString();
+
+            String path = QiniuUtil.fileUpload(book.getFile().getInputStream(), fileName);
+
+            book.setImg(path);
             bookService.add(book);
             resultUtil.setCode(200);
             resultUtil.setMsg("success");
@@ -97,8 +107,30 @@ public class BookController {
             resultUtil.setCode(100);
             resultUtil.setMsg(e.getMessage());
         }
+        logger.info(resultUtil);
         return resultUtil;
     }
 
+
+
+//    @ResponseBody
+//    @RequestMapping("/book/add2")
+//    public ResultUtil add2(Book book, HttpServletRequest request) {
+//        logger.info(book);
+//        ResultUtil resultUtil = new ResultUtil();
+//
+//        try {
+//            book.setImg(FileUtil.saveFileReturnPath(book.getFile(), "images"));
+//            bookService.add(book);
+//            resultUtil.setCode(200);
+//            resultUtil.setMsg("success");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            resultUtil.setCode(100);
+//            resultUtil.setMsg(e.getMessage());
+//        }
+//
+//        return resultUtil;
+//    }
 
 }

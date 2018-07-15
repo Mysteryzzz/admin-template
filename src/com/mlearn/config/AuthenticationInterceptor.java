@@ -6,6 +6,10 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author rezero
+ */
+@SuppressWarnings("AlibabaUndefineMagicConstant")
 public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 
     private Logger logger = Logger.getLogger(this.getClass());

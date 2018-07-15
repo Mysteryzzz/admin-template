@@ -2,6 +2,9 @@ package com.mlearn.entity;
 
 import java.io.Serializable;
 
+/**
+ * @author rezero
+ */
 public class Admin implements Serializable {
 
     Integer id;

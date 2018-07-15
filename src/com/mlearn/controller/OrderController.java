@@ -26,20 +26,8 @@ public class OrderController {
 
     private Logger logger = Logger.getLogger(this.getClass());
 
-//    @ResponseBody
-//    @RequestMapping(value = "/order", method = RequestMethod.GET)
-//    public PageInfo list(@RequestParam(value = "pageNumber" , required = false, defaultValue = "1") Integer pageNumber){
-//
-//        Integer pageSize = 10;
-//
-//        PageHelper.startPage(pageNumber, pageSize);
-//
-//        List<Order> orders = orderService.findAll();
-//
-//        PageInfo pageInfo = new PageInfo(orders);
-//
-//        return pageInfo;
-//    }
+    private static final int RETRY = 3;
+    private static final int PAGESIZE = 3;
 
     @ResponseBody
     @RequestMapping(value = "/order/info", method = RequestMethod.GET)
@@ -78,10 +66,9 @@ public class OrderController {
 
         List<Order> orders = null;
 
-        Integer pageSize = 10;
-        PageHelper.startPage(pageNumber, pageSize);
+        PageHelper.startPage(pageNumber, PAGESIZE);
 
-        if (state < 3){
+        if (state < RETRY){
             orders = orderService.findSateList(state);
         }
         else {

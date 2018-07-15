@@ -5,14 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Orders Management</title>
-    <link href="static/css/bootstrap.css" rel="stylesheet">
-
-    <script src="static/js/jquery-3.3.1.js"></script>
-
-    <script src="static/js/bootstrap.js"></script>
-
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link rel="import" href="static/html/navigation.html">
-
     <style type="text/css">
         body {
             height: 100%;
@@ -88,16 +82,16 @@
     </div>
 </div>
 
+
 <!--Load Script-->
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
 <script>
 
     let link = document.querySelector('link[rel="import"]');
-
     let template = link.import.querySelector('template');
     let content = template.content.cloneNode(true)
-
     document.querySelector('body').appendChild(content);
-
     $('.navbar > ul:nth-child(1) li:nth-child(3)').addClass("active");
 </script>
 

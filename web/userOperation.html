@@ -5,30 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Users Management</title>
-    <link href="static/css/bootstrap.css" rel="stylesheet">
-
-    <script src="static/js/jquery-3.3.1.js"></script>
-
-    <script src="static/js/bootstrap.js"></script>
-
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link rel="import" href="static/html/navigation.html">
     <style type="text/css">
-        /** {*/
-        /*margin: 5px;*/
-        /*padding: 0px;*/
-        /*}*/
         body {
             height: 100%;
             width: 100%;
         }
-        /*#vertical-container {*/
-        /*position: absolute;*/
-        /*display: flex;*/
-        /*align-items: center; !*垂直居中*!*/
-        /*justify-content: center; !*水平居中*!*/
-        /*height: 100%;*/
-        /*width: 100%;*/
-        /*}*/
     </style>
 </head>
 <body>
@@ -39,11 +22,6 @@
         <!-- Default panel contents -->
         <div class="panel-heading">用户管理</div>
         <div class="panel-body">
-            <!--data-toggle="modal"-->
-            <!--data-target="#userModal"-->
-            <!--<button type="button" id="addBtn" class="btn btn-primary btn-mini">-->
-                <!--添加新用户-->
-            <!--</button>-->
             <button type="button" id="logout" class="pull-right btn btn-default btn-mini">
                 登出
             </button>
@@ -131,18 +109,16 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+
 <!--Load Script-->
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
 <script>
-
     let link = document.querySelector('link[rel="import"]');
-
     let template = link.import.querySelector('template');
-    let content = template.content.cloneNode(true)
-
+    let content = template.content.cloneNode(true);
     document.body.appendChild(content);
-
     $('.navbar > ul:nth-child(1) li:nth-child(1)').addClass("active");
-
 </script>
 
 <!--Executable Script -->

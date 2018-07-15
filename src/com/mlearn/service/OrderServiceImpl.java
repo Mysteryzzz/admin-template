@@ -18,7 +18,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> findAll() {
 
-        List<Order> orders = orderMapper.findAll();
+        List<Order> orders = null;
+        try {
+            orders = orderMapper.findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("not found");
+        }
 
         return orders;
     }
@@ -26,7 +32,12 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void delivery(Integer id) {
 
-        orderMapper.updateState(id, 1);
+        try {
+            orderMapper.updateState(id, 1);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("delivery failed");
+        }
 
     }
 
@@ -34,7 +45,13 @@ public class OrderServiceImpl implements OrderService {
     public List<OrderItem> selectByOrderNumber(Integer orderNumber) {
 
 
-        List<OrderItem> orderItemList = orderMapper.selectByOrderNumber(orderNumber);
+        List<OrderItem> orderItemList = null;
+        try {
+            orderItemList = orderMapper.selectByOrderNumber(orderNumber);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("not found");
+        }
         return orderItemList;
 
     }
@@ -42,7 +59,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> findSateList(Integer state) {
 
-        List<Order> orders = orderMapper.findBySate(state);
+        List<Order> orders = null;
+        try {
+            orders = orderMapper.findBySate(state);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("not found");
+        }
 
         return orders;
     }
