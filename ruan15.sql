@@ -44,15 +44,8 @@ CREATE TABLE `books` (
   `img` varchar(100) DEFAULT NULL,
   `state` int(11) DEFAULT NULL,
   PRIMARY KEY (`bid`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
--- ----------------------------
--- Records of books
--- ----------------------------
-INSERT INTO `books` VALUES ('11', '啊哈', '3', '3', '/images/d559a7b1510847a88133082942c8bd49.jpeg', '0');
-INSERT INTO `books` VALUES ('12', 'gaga', '10', '3', '/images/6c39259e463c4c848fc070524377098e.jpeg', '1');
-INSERT INTO `books` VALUES ('13', 'test', '1', '1', '/images/af23c93578514203967fda0a9053ccb7.jpeg', '1');
-INSERT INTO `books` VALUES ('17', 'Ka卡', '13', '100', '/images/c800c00fba954a58adc79cd75f41262a.jpeg', '1');
 
 -- ----------------------------
 -- Table structure for `orderitems`
@@ -66,7 +59,7 @@ CREATE TABLE `orderitems` (
   PRIMARY KEY (`iid`),
   KEY `orderId` (`orderId`),
   KEY `bookId` (`bookId`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of orderitems
@@ -86,7 +79,7 @@ CREATE TABLE `orders` (
   `state` int(11) DEFAULT NULL,
   PRIMARY KEY (`oid`),
   KEY `buyerId` (`buyerId`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of orders
@@ -105,7 +98,7 @@ CREATE TABLE `user` (
   `islock` int(11) DEFAULT NULL,
   `lastdate` datetime DEFAULT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user
