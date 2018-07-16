@@ -44,7 +44,7 @@ CREATE TABLE `books` (
   `img` varchar(100) DEFAULT NULL,
   `state` int(11) DEFAULT NULL,
   PRIMARY KEY (`bid`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 -- ----------------------------
@@ -59,12 +59,12 @@ CREATE TABLE `orderitems` (
   PRIMARY KEY (`iid`),
   KEY `orderId` (`orderId`),
   KEY `bookId` (`bookId`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of orderitems
 -- ----------------------------
-INSERT INTO `orderitems` VALUES ('1', '1', '11', '2');
+# INSERT INTO `orderitems` VALUES ('1', '1', '11', '2');
 
 -- ----------------------------
 -- Table structure for `orders`
@@ -79,12 +79,12 @@ CREATE TABLE `orders` (
   `state` int(11) DEFAULT NULL,
   PRIMARY KEY (`oid`),
   KEY `buyerId` (`buyerId`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
-INSERT INTO `orders` VALUES ('1', '1', '1', '10', null, '0');
+# INSERT INTO `orders` VALUES ('1', '1', '1', '10', null, '0');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -98,10 +98,10 @@ CREATE TABLE `user` (
   `islock` int(11) DEFAULT NULL,
   `lastdate` datetime DEFAULT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '1111', '123456', '3663', '3', '2018-07-10 17:49:28');
-INSERT INTO `user` VALUES ('2', '222', '123456', '31321@3131', null, null);
+# INSERT INTO `user` VALUES ('1', '1111', '123456', '3663', '3', '2018-07-10 17:49:28');
+# INSERT INTO `user` VALUES ('2', '222', '123456', '31321@3131', null, null);
