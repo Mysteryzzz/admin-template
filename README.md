@@ -40,7 +40,26 @@ Admin template.
 
  - BookCSM & UserCSM & OrderCSM
 
-    - 
+    - FontEnd send request using RESTFul like this:
+
+        - GET: localhost/user check all users
+        
+        - POST: localhost/user add user
+
+        - PUT: localhost/user/1 update user whose id equals 1
+
+        - DELETE: localhost/user/1 delete user whose id equals 1
+
+        - And so on.
+
+    But one thing need to care: I do not use **token** to do the **Authentication** , and simplify the process with session instead.
+
+    - BackEnd 
+
+        - Controller will receive the form data and inject them to the entity located in the controller method.
+
+        - Service will handle the whole transcations.
+
 
 
 
