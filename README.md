@@ -40,7 +40,7 @@ Admin template.
 
  - BookCSM & UserCSM & OrderCSM
 
-    - FontEnd send request using RESTFul like this:
+    - FontEnd send request using RESTFul API like this:
 
         - GET: localhost/user check all users
         
@@ -58,7 +58,30 @@ Admin template.
 
         - Controller will receive the form data and inject them to the entity located in the controller method.
 
-        - Service will handle the whole transcations.
+        - Service will handle the whole transactions of this project. And it will entrust mapper to deal with the database
+
+        - Mapper will handle the reciprocal process between the database and programmar.
+
+    - Summary (Process)
+
+        - So the abvoe is the whole process. Almost all of them like:
+        `page[ajax:request]->Controller[function:args]->Service[function:args]->(Entity : ResultSet)Mapper[xml or annotation:Sql]->(Entity, Exception)Service->(Response)Controller->page[js:dom rendering]
+
+3. Qiniuyun image storage
+
+    - Upload function is implemented by qiniuyun sdk. You could get more infos from [here](https://developer.qiniu.com/kodo/sdk/1239/java).
+
+
+4. TODO:
+
+    - Token realized OR
+
+    - Redis realize the session function
+
+        - redis save user like this:  `userID : jsessionid` , then get cookie jsessionid from client and compare to get the user.
+
+    
+    
 
 
 

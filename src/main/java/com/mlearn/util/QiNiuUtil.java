@@ -13,10 +13,10 @@ import java.io.InputStream;
 
 public class QiNiuUtil {
 
-    private static final String ACCESS_KEY = "FYZ2-x4KSE3guIf2VLwx7ufC-UOYd9sFuZ3IAjzF";
-    private static final String SECRET_KEY = "6PyHxCRo_DPJ6-B7G-R4Sl4JgxsiUUI1rUz3ZpEp";
-    private static final String BUCKET = "rezeros";
-    private static final String PATH = "http://pbuheihcs.bkt.clouddn.com";
+    private static final String ACCESS_KEY = "your access key";
+    private static final String SECRET_KEY = "your secret key";
+    private static final String BUCKET = "your zone";
+    private static final String PATH = "your img.domain";
 
 
     public static String fileUpload(InputStream file, String fileName) {
