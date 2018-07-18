@@ -1,7 +1,11 @@
-~function (pageNumber, state) {
-    console.log(pageNumber + state);
-    loadPage(pageNumber, state);
-}(1, 3);
+~function () {
+
+    let param1 = location.search.substr(6, 1);
+    let param2 = location.search.substr(14, 1);
+    console.log(param1 + param2);
+    loadPage(param1, param2);
+}();
+
 
 function loadPage(pageNumber, state) {
     //clean current page
