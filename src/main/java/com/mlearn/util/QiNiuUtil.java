@@ -11,9 +11,12 @@ import com.qiniu.util.Auth;
 
 import java.io.InputStream;
 
-public class QiniuUtil {
+public class QiNiuUtil {
 
-
+    private static final String ACCESS_KEY = "FYZ2-x4KSE3guIf2VLwx7ufC-UOYd9sFuZ3IAjzF";
+    private static final String SECRET_KEY = "6PyHxCRo_DPJ6-B7G-R4Sl4JgxsiUUI1rUz3ZpEp";
+    private static final String BUCKET = "rezeros";
+    private static final String PATH = "http://pbuheihcs.bkt.clouddn.com";
 
 
     public static String fileUpload(InputStream file, String fileName) {

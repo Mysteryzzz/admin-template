@@ -31,14 +31,20 @@ public class OrderController {
 
     @ResponseBody
     @RequestMapping(value = "/order/info", method = RequestMethod.GET)
-    public ResultUtil info(@RequestParam(value = "ordernum" , required = true) Integer orderNumber){
+    public ResultUtil info(@RequestParam(value = "ordernum" , required = true) String orderNumber){
         ResultUtil resultUtil = new ResultUtil();
 
         logger.info("the different param in the same route");
 
-        List<OrderItem> orderItems = orderService.selectByOrderNumber(orderNumber);
-        resultUtil.setCode(1);
-        resultUtil.setMsg(orderItems);
+        try {
+            List<OrderItem> orderItems = orderService.selectByOrderNumber(orderNumber);
+            resultUtil.setCode(1);
+            resultUtil.setMsg(orderItems);
+        } catch (Exception e) {
+            e.printStackTrace();
+            resultUtil.setCode(0);
+            resultUtil.setMsg("Query failed");
+        }
 
         return resultUtil;
     }

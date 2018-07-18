@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<OrderItem> selectByOrderNumber(Integer orderNumber) {
+    public List<OrderItem> selectByOrderNumber(String orderNumber) {
 
 
         List<OrderItem> orderItemList = null;

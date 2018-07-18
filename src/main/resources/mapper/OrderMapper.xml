@@ -26,7 +26,7 @@
          UPDATE orders SET state = #{state} WHERE orders.oid = #{id}
     </update>
 
-    <select id="selectByOrderNumber" parameterType="int" resultMap="com.mlearn.mapper.OrderItemMapper.orderItemMapper">
+    <select id="selectByOrderNumber" resultMap="com.mlearn.mapper.OrderItemMapper.orderItemMapper">
       select item.*, o.*, b.*, u.uid from orders o
       INNER JOIN orderitems item
       on o.oid = item.orderId
@@ -34,7 +34,7 @@
       on b.bid = item.bookId
       INNER JOIN user u
       on u.uid = o.buyerId
-      where o.ordernum = #{orderNumber}
+      where o.ordernum = #{ordernumber}
     </select>
 
 </mapper>

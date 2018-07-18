@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.mlearn.controller.BookController</OriginalElement>
+  <nodes>
+    <node x="0.0" y="107.0">com.mlearn.controller.BookController</node>
+    <node x="95.0" y="0.0">org.springframework.stereotype.Controller</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.mlearn.controller.BookController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-104.0" />
+      <point x="0.0" y="28.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="175.0" y="157.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

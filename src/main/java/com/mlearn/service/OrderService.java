@@ -12,7 +12,7 @@ public interface OrderService {
 
     void delivery(Integer id);
 
-    List<OrderItem> selectByOrderNumber(Integer orderNumber);
+    List<OrderItem> selectByOrderNumber(String orderNumber);
 
     List<Order> findSateList(Integer state);
 }

@@ -5,7 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.mlearn.entity.Book;
 import com.mlearn.service.BookService;
-import com.mlearn.util.QiniuUtil;
+import com.mlearn.util.QiNiuUtil;
 import com.mlearn.vo.ResultUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
 
 import com.mlearn.util.FileUtil;
-import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class BookController {
@@ -96,7 +94,7 @@ public class BookController {
         try {
             String fileName = UUID.randomUUID().toString();
 
-            String path = QiniuUtil.fileUpload(book.getFile().getInputStream(), fileName);
+            String path = QiNiuUtil.fileUpload(book.getFile().getInputStream(), fileName);
 
             book.setImg(path);
             bookService.add(book);

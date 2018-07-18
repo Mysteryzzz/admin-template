@@ -28,7 +28,7 @@ function loadPage(pageNumber, state) {
                     let state = item.state === 0 ? "未发货" : (item.state === 1 ? "已发货" : "已完成");
                     let totalPrice = item.totalprice;
                     let tr = $("<tr></tr>");
-                    tr.append($("<td></td>").append($("<a></a>").attr({"href": "javascript:showInfo(" + ordernum + ")"}).text(id)));
+                    tr.append($("<td></td>").append($("<a></a>").attr({"href": 'javascript:showInfo(\'' + ordernum + '\')'}).text(id)));
                     tr.append($("<td></td>").text(ordernum));
                     tr.append($("<td></td>").text(buyerId));
                     tr.append($("<td></td>").text(createDate));
